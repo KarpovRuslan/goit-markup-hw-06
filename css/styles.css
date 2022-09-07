@@ -478,6 +478,52 @@ img {
   background-color: var(--logo-color);
 }
 
+.subscription {
+  margin-left: 93px;
+}
+
+.subs-email {
+  box-sizing: border-box;
+  width: 358px;
+  height: 50px;
+
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: var(--link-footer-color);
+  background-color: var(--second-bkgrd-color);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding: 15px 16px;
+}
+
+.signup-button {
+  padding: 10px 28px;
+  width: 200px;
+  border: none;
+  margin-left: 12px;
+
+  background: var(--logo-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.99;
+  letter-spacing: 0.06em;
+
+  color: var(--main-bkgrd-color);
+  transition: background-color var(--timing) var(--transition-func);
+
+  cursor: pointer;
+}
+
+.signup-button:hover,
+.signup-button:focus {
+  background-color: var(--button-hero-active);
+}
 /* Секція Постійні клієнти */
 .clients {
   display: flex;
@@ -692,8 +738,8 @@ img {
   transform: scale(1) translate(-50%, -50%);
   transition: transform var(--timing) var(--transition-func);
 
-  height: 581px;
   width: 528px;
+  padding: 40px;
 
   background-color: var(--main-bkgrd-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -715,4 +761,101 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--main-bkgrd-color);
   cursor: pointer;
+}
+
+.title-modal {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+
+  color: var(--main-text-color);
+
+  margin-bottom: 12px;
+}
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-field input {
+  margin: 0;
+  padding: 14px 15px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-field label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--second-text-color);
+}
+
+.form-checkbox {
+  display: inline-flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: var(--second-text-color);
+}
+
+.form-text-area {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.policy-doc {
+  color: var(--logo-color);
+}
+
+.submit-button {
+  width: 200px;
+  height: 50px;
+  padding: 10px 52px;
+  background-color: var(--logo-color);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--main-bkgrd-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  transition: background-color var(--timing) var(--transition-func);
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: var(--button-hero-active);
 }

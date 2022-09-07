@@ -512,13 +512,13 @@
                 >
               </li>
               <li class="contacts-item">
-                <a href="mailto:info@example.com" class="link-footer"
-                  >info@example.com</a
+                <a href="mailto:info@devstudio.com" class="link-footer"
+                  >info@devstudio.com</a
                 >
               </li>
               <li class="contacts-item">
-                <a href="tel:+380991111111" class="link-footer"
-                  >+38 099 111 11 11</a
+                <a href="tel:+380961111111" class="link-footer"
+                  >+38 096 111 11 11</a
                 >
               </li>
             </ul>
@@ -578,13 +578,67 @@
             </li>
           </ul>
         </div>
+
+        <div class="subscription">
+          <p class="connect-text">Підпишіться на розсилку</p>
+          <form name="signup_form">
+            <label class="signup-label">
+              <input
+                type="email"
+                name="email"
+                class="subs-email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="signup-button">Підписатися</button>
+          </form>
+        </div>
       </div>
     </footer>
 
     <!-- Modal Icon -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="close-modal" data-modal-close>&#10005;</button>
+        <form class="form">
+          <button class="close-modal" data-modal-close>&#10005;</button>
+          <p class="title-modal">Залиште свої дані, ми вам передзвонимо</p>
+          <div class="form-field">
+            <label for="name">Ім'я</label>
+            <span class="icon"></span>
+            <input type="text" name="name" id="name" placeholder="" />
+          </div>
+
+          <div class="form-field">
+            <label for="tel">Телефон</label>
+            <input type="tel" name="tel" id="tel" placeholder="" />
+          </div>
+
+          <div class="form-field">
+            <label for="mail">Пошта</label>
+            <input type="mail" name="mail" id="mail" placeholder="" />
+          </div>
+
+          <div class="form-field">
+            <label for="comment">Коментар</label>
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder="Введіть текст"
+              class="form-text-area"
+            ></textarea>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" name="policy" id="policy" placeholder="" />
+            <label for="policy"
+              >Погоджуюся з розсилкою та приймаю
+              <link />
+              <span class="policy-doc">Умови договору</span>
+            </label>
+          </div>
+
+          <button type="submit" class="submit-button">Відправити</button>
+        </form>
       </div>
     </div>
     <!-- Script of modal Icon -->
