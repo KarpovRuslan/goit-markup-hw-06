@@ -581,7 +581,7 @@
 
         <div class="subscription">
           <p class="connect-text">Підпишіться на розсилку</p>
-          <form name="signup_form">
+          <form class="signup-form">
             <label class="signup-label">
               <input
                 type="email"
@@ -590,7 +590,12 @@
                 placeholder="E-mail"
               />
             </label>
-            <button type="submit" class="signup-button">Підписатися</button>
+            <button type="submit" class="signup-button">
+              Підписатися
+              <svg class="signup-img">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -600,45 +605,61 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <form class="form">
-          <button class="close-modal" data-modal-close>&#10005;</button>
           <p class="title-modal">Залиште свої дані, ми вам передзвонимо</p>
-          <div class="form-field">
-            <label for="name">Ім'я</label>
-            <span class="icon"></span>
-            <input type="text" name="name" id="name" placeholder="" />
-          </div>
+          <label for="name" class="form-field">
+            <span class="form-label">Ім'я</span>
+            <input type="text" name="name" class="modal-input" />
+            <svg class="form-icon">
+              <use href="./images/icons.svg#icon-modal-name"></use>
+            </svg>
+          </label>
 
-          <div class="form-field">
-            <label for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel" placeholder="" />
-          </div>
+          <label for="tel" class="form-field">
+            <span class="form-label">Телефон</span>
+            <input type="tel" name="tel" class="modal-input" />
+            <svg class="form-icon">
+              <use href="./images/icons.svg#icon-modal-tel"></use>
+            </svg>
+          </label>
 
-          <div class="form-field">
-            <label for="mail">Пошта</label>
-            <input type="mail" name="mail" id="mail" placeholder="" />
-          </div>
+          <label for="mail" class="form-field">
+            <span class="form-label">Пошта</span>
+            <input type="mail" name="mail" class="modal-input" />
+            <svg class="form-icon">
+              <use href="./images/icons.svg#icon-modal-mail"></use>
+            </svg>
+          </label>
 
-          <div class="form-field">
-            <label for="comment">Коментар</label>
+          <label for="comment" class="form-field">
+            <span class="form-label">Коментар</span>
             <textarea
               name="comment"
               id="comment"
               placeholder="Введіть текст"
               class="form-text-area"
             ></textarea>
-          </div>
+          </label>
 
-          <div class="form-checkbox">
-            <input type="checkbox" name="policy" id="policy" placeholder="" />
-            <label for="policy"
+          <label class="form-checkbox">
+            <input
+              type="checkbox"
+              name="checkbox"
+              class="checkbox-check visually-hidden"
+            />
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-text textline"
               >Погоджуюся з розсилкою та приймаю
-              <link />
-              <span class="policy-doc">Умови договору</span>
-            </label>
-          </div>
+              <a href="" class="link-checkbox textline">Умови договору</a>
+            </span>
+          </label>
 
           <button type="submit" class="submit-button">Відправити</button>
         </form>
+        <button class="close-modal" data-modal-close>
+          <svg>
+            <use href="./images/icons.svg#icon-modal-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <!-- Script of modal Icon -->

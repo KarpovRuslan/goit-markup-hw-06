@@ -240,7 +240,11 @@ img {
 }
 
 .hero-button:focus,
-.hero-button:hover {
+.hero-button:hover,
+.submit-button:hover,
+.submit-button:focus,
+.signup-button:hover,
+.signup-button:focus {
   background-color: var(--button-hero-active);
 }
 /* секція Особливості */
@@ -479,29 +483,37 @@ img {
 }
 
 .subscription {
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 .subs-email {
   box-sizing: border-box;
   width: 358px;
-  height: 50px;
+  padding: 15px 16px;
 
   font-size: 16px;
   line-height: 1.25;
 
   color: var(--link-footer-color);
-  background-color: var(--second-bkgrd-color);
+  background-color: transparent;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  padding: 15px 16px;
+}
+
+.signup-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .signup-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 10px 28px;
-  width: 200px;
   border: none;
   margin-left: 12px;
 
@@ -520,10 +532,13 @@ img {
   cursor: pointer;
 }
 
-.signup-button:hover,
-.signup-button:focus {
-  background-color: var(--button-hero-active);
+.signup-img {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: var(--main-bkgrd-color);
 }
+
 /* Секція Постійні клієнти */
 .clients {
   display: flex;
@@ -761,6 +776,13 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--main-bkgrd-color);
   cursor: pointer;
+
+  transition: fill var(--timing) var(--transition-func);
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  fill: var(--logo-color);
 }
 
 .title-modal {
@@ -780,19 +802,34 @@ img {
 }
 
 .form-field {
-  display: flex;
+  position: relative;
+  display: block;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.form-field input {
+.modal-input {
   margin: 0;
-  padding: 14px 15px;
+  padding-left: 42px;
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border var(--timing) var(--transition-func);
+
+  cursor: pointer;
 }
 
-.form-field label {
+.modal-input:focus {
+  border: 1px solid var(--logo-color);
+}
+
+.modal-input:focus + .form-icon {
+  fill: var(--logo-color);
+}
+.form-label {
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
@@ -800,17 +837,54 @@ img {
   color: var(--second-text-color);
 }
 
+.form-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 12px;
+
+  fill: currentColor;
+  transition: fill var(--timing) var(--transition-func);
+}
+
 .form-checkbox {
   display: inline-flex;
   margin-top: 20px;
   margin-bottom: 30px;
+  margin-left: 12px;
   cursor: pointer;
+}
 
-  font-weight: 400;
+.checkbox-text {
+  padding-left: 15px;
+  color: var(--second-text-color);
+}
+.textline {
   font-size: 14px;
   line-height: 1.71;
+}
 
-  color: var(--second-text-color);
+.link-checkbox {
+  text-decoration: none;
+  text-decoration-line: underline;
+  color: var(--logo-color);
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  background-image: url(../images/icons/checkbox-unchecked.svg);
+}
+
+.checkbox-check:checked + .checkbox-icon {
+  width: 16px;
+  height: 15px;
+  background-image: url(/images/icons/checkbox-checked.svg);
+  background-color: var(--button-hero-active);
 }
 
 .form-text-area {
@@ -826,26 +900,25 @@ img {
   color: rgba(117, 117, 117, 0.5);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-}
-
-.policy-doc {
-  color: var(--logo-color);
+  cursor: pointer;
 }
 
 .submit-button {
   width: 200px;
-  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+
   padding: 10px 52px;
-  background-color: var(--logo-color);
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
+  display: block;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--main-bkgrd-color);
+  background-color: var(--logo-color);
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -853,9 +926,4 @@ img {
   cursor: pointer;
 
   transition: background-color var(--timing) var(--transition-func);
-}
-
-.submit-button:hover,
-.submit-button:focus {
-  background-color: var(--button-hero-active);
 }
