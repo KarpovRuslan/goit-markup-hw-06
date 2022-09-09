@@ -811,9 +811,6 @@ img {
 .modal-input {
   margin: 0;
   padding-left: 42px;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 0;
   height: 40px;
   width: 100%;
   box-sizing: border-box;
@@ -823,6 +820,7 @@ img {
   transition: border var(--timing) var(--transition-func);
 
   cursor: pointer;
+  outline: none;
 }
 
 .modal-input:focus {
@@ -904,6 +902,11 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   cursor: pointer;
+  outline: none;
+}
+
+.form-text-area:focus {
+  border: 1px solid var(--logo-color);
 }
 
 .submit-button {
