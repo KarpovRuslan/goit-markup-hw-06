@@ -811,6 +811,9 @@ img {
 .modal-input {
   margin: 0;
   padding-left: 42px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
   height: 40px;
   width: 100%;
   box-sizing: border-box;
