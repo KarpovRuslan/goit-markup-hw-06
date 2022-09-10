@@ -813,6 +813,9 @@ img {
   margin-bottom: 10px;
 }
 
+.form-field:nth-last-child(3) {
+  margin-bottom: 0;
+}
 .modal-input {
   padding-left: 42px;
   height: 40px;
@@ -836,6 +839,7 @@ img {
   fill: var(--logo-color);
 }
 .form-label {
+  display: block;
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
